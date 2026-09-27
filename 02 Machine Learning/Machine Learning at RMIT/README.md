@@ -59,6 +59,6 @@ training can take time on a CPU.
 
 The ASM1 assignment and supplied dataset are excluded from this public
 repository because their use is restricted to the course. The separate
-`MLA2` repository is also outside this repository. In `ASM2-3`, group
-deliverables are ignored; assignment briefs and a personal HTML lab remain
-local and untracked.
+[MLA2 project and demo](MLA2.md) are linked here; its checkout is outside this
+repository. In `ASM2-3`, group deliverables are ignored; assignment briefs and
+the personal HTML lab are included.

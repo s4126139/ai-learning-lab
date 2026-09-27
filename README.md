@@ -1,58 +1,65 @@
-# Machine Learning study repository
+# AI Learning Lab
 
-This repository collects three independent Jupyter workspaces and one
-documentation handbook. Each Python workspace has its own `pyproject.toml`,
-`uv.lock`, Python version, datasets, and setup guide. Install and launch each
-workspace from its own directory.
+A study path from mathematics and classical machine learning to deep learning,
+LLM applications, AI agents, and a capstone project. The numbered stage folders
+are at the repository root. **Completed** marks prior study; **planned** stages
+are a roadmap, not a claim that their exercises are finished.
 
-| Section | What is here | Start here |
+| Stage | Focus | Status | Start here |
+| --- | --- | --- | --- |
+| 01 | Foundation Mathematics: MIT 18.01, 18.02, 18.05, 18.06 | Completed | [Foundation Mathematics](<01 Foundation Mathematics/README.md>) |
+| 02 | Machine Learning: IBM, Andrew Ng, RMIT, and lifecycle handbook | Existing study materials | [Machine Learning](<02 Machine Learning/README.md>) |
+| 03 | Deep Learning Specialization | Planned | [Deep Learning](<03 Deep Learning/README.md>) |
+| 04 | PyTorch Learn the Basics | Planned | [PyTorch](<04 PyTorch/README.md>) |
+| 05 | Stanford CS224N and LLM foundations | Planned | [NLP and LLM Foundations](<05 NLP and LLM Foundations/README.md>) |
+| 06 | LLM Zoomcamp and application evaluation | Planned | [LLM Applications](<06 LLM Applications/README.md>) |
+| 07 | Hugging Face Agents Course | Planned | [AI Agents](<07 AI Agents/README.md>) |
+| 08 | Integrated capstone | Planned | [Capstone](<08 Capstone/README.md>) |
+
+## Existing Machine Learning workspaces
+
+The four original folders now live together under `02 Machine Learning`:
+
+| Workspace | Contents | Guide |
 | --- | --- | --- |
-| IBM Machine Learning with Python | Concept notes and 23 local lab notebooks | [IBM guide](<Python For Machine Learning IBM/README.md>) |
-| Andrew Ng Machine Learning Specialization | Course 1 and 2 notes, helpers, and 37 lab notebooks | [Andrew guide](<Machine Learning Andrew/README.md>) |
-| RMIT Machine Learning | Week notes, teaching files, datasets, and 17 tracked notebooks | [RMIT guide](<Machine Learning at RMIT/README.md>) |
-| ML lifecycle handbook | Documentation for project design, evaluation, deployment, and monitoring | [Handbook](<Machine Learning tổng/README.md>) |
+| IBM Machine Learning with Python | Concept notes and local labs | [IBM guide](<02 Machine Learning/Python For Machine Learning IBM/README.md>) |
+| Andrew Ng Machine Learning Specialization | Three courses of notes, helpers, and labs | [Andrew guide](<02 Machine Learning/Machine Learning Andrew/README.md>) |
+| RMIT Machine Learning | Week notes, teaching files, datasets, and notebooks | [RMIT guide](<02 Machine Learning/Machine Learning at RMIT/README.md>) |
+| ML lifecycle handbook | Project design, evaluation, deployment, and monitoring guides | [Handbook](<02 Machine Learning/Machine Learning tổng/README.md>) |
 
-## Start using the notebooks
+Each of the three Python workspaces keeps its own `pyproject.toml`, `uv.lock`,
+`.python-version`, and setup guide. Install [uv](https://docs.astral.sh/uv/),
+change into the workspace you want, and run `uv sync --locked` there. Start
+Jupyter from the notebook or lab directory as its guide describes so local
+data paths and helper imports resolve. The pinned Python versions are 3.12 for
+IBM, 3.14 for Andrew, and 3.14.5 for RMIT. Andrew Course 2 and 3 and RMIT
+Week 8–9 TensorFlow labs use separate Python 3.12 environments described in
+their guides.
 
-Install [uv](https://docs.astral.sh/uv/) and clone this repository. On Windows,
-open PowerShell in the section you want and run `uv sync --locked`. Then open
-that section's README for the Jupyter command, kernel selection, and working
-directory. The pinned Python versions are 3.12 for IBM, 3.14 for Andrew, and
-3.14.5 for RMIT. Andrew Course 2 and RMIT Week 8–9 TensorFlow labs use separate
-Python 3.12 environments described in their guides.
-
-Open notebooks on GitHub to read saved code and outputs. All nonempty code
-cells in the IBM and Andrew notebooks have saved execution counts and no
-saved error outputs. The RMIT notebooks include course templates and older
-copies; some have no saved run. To reproduce any result, use its section's
-environment, start Jupyter from the notebook or lab directory, restart the
-kernel, and run cells in order.
+Saved notebook code and outputs remain available for reading on GitHub. To
+reproduce a result, use that workspace's environment, restart its kernel, and
+run cells in order. Some RMIT notebooks are course templates or older copies
+without a saved run.
 
 ## Data and access
 
-- Most lab data is next to its notebook. The IBM fraud lab is the exception:
-  its 151 MB `creditcard.csv` is not in Git. Use the
-  [fraud data instructions](<Python For Machine Learning IBM/Module 3 Building Supervised Learning Models/labs/data/README.md>)
-  before running that notebook.
-- RMIT Canvas pages require a course login. Direct Canvas links were removed
-  from notes, notebooks, and the personal HTML lab. Two retained assignment
-  brief PDFs still contain their original course links and may require RMIT
-  access. The [local material manifest](<Machine Learning at RMIT/canvas_materials_manifest.md>)
-  records what was captured and which slide placeholders remained unresolved.
-- The RMIT ASM1 assignment and supplied dataset are excluded from this public
-  repository because their use is restricted to the course. Keep private
-  copies within the permitted assessment context.
-- The separate `MLA2` repository is outside this repo. In `ASM2-3`, the two
-  group deliverables are excluded by `.gitignore`; three assignment briefs and
-  the personal HTML lab are included. The HTML works as a standalone page: it
-  uses in-page navigation and embeds the original project figures without
-  loading files from the separate `MLA2` repository.
+- Most lab data is next to its notebook. The IBM fraud lab's 151 MB
+  `creditcard.csv` is excluded from Git; follow the
+  [fraud data instructions](<02 Machine Learning/Python For Machine Learning IBM/Module 3 Building Supervised Learning Models/labs/data/README.md>).
+- RMIT Canvas pages require a course login. The
+  [local material manifest](<02 Machine Learning/Machine Learning at RMIT/canvas_materials_manifest.md>)
+  records captured material and unresolved slide placeholders. Two retained
+  assignment brief PDFs still contain original course links.
+- The RMIT ASM1 assignment and supplied dataset remain excluded because their
+  use is restricted to the course. The separate [MLA2 project and demo](<02 Machine Learning/Machine Learning at RMIT/MLA2.md>)
+  are linked from this repo, while its checkout remains outside this Git tree.
+  In `ASM2-3`, group deliverables are excluded by `.gitignore`; assignment
+  briefs and the personal HTML lab are included.
 
 ## Repository checks
 
-The three lockfiles can be checked from their own directories with
-`uv lock --check`. A fresh Jupyter installation can validate a notebook with
-`python -m nbconvert --to notebook --execute <file.ipynb>`; this may take time
-for model-training labs and requires the datasets noted above. Do not save
-private credentials, local virtual environments, or generated model files in
-Git.
+Run `uv lock --check` inside each Python workspace to check its lockfile. A
+fresh Jupyter installation can validate a notebook with
+`python -m nbconvert --to notebook --execute <file.ipynb>`; training labs may
+take time and need the datasets noted above. Keep credentials, local virtual
+environments, and generated model files out of Git.

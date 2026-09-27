@@ -1,5 +1,13 @@
 # Git, Nested Repositories, and PowerShell Commands
 
+> **Historical setup note:** The current GitHub repository is
+> [`s4126139/ai-learning-lab`](https://github.com/s4126139/ai-learning-lab),
+> and these workspaces now live under `02 Machine Learning/`. The commands and
+> directory snapshots below describe the original repository setup. Do not
+> rerun `git init`, remove nested `.git` folders, or add the old remote in the
+> existing checkout. See the [repository README](<../../README.md>) for the
+> current layout.
+
 This note explains the Git problems from this part of the conversation:
 
 - You had a local folder that was not initialized as a Git repository yet.

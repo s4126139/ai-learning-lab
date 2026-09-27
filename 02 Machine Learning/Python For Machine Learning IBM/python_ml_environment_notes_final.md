@@ -1,5 +1,11 @@
 # Python Environments for Machine Learning: `uv`, `.venv`, `pip`, Jupyter Kernels, and Git
 
+> **Current layout (AI Learning Lab):** The IBM workspace is now at
+> `02 Machine Learning/Python For Machine Learning IBM/` from the repository
+> root. Use its [workspace README](README.md) for the current pinned environment
+> and setup commands. Directory sketches and initial setup commands below
+> document an earlier layout.
+
 These notes summarize the full conversation about setting up Python environments for Machine Learning courses from multiple sources, such as MIT/RMIT and IBM. The notes are grouped by topic, not by the order of questions.
 
 ---
@@ -368,7 +374,7 @@ Three layers:
 The notebook should usually use the project `.venv` Python, for example:
 
 ```text
-C:\Users\Khoai\RMIT\Machine_Learning\Python For Machine Learning IBM\.venv\Scripts\python.exe
+C:\Users\Khoai\RMIT\ai-learning-lab\02 Machine Learning\Python For Machine Learning IBM\.venv\Scripts\python.exe
 ```
 
 ---
@@ -719,7 +725,7 @@ Select Kernel
 Paste the path:
 
 ```text
-C:\Users\Khoai\RMIT\Machine_Learning\Python For Machine Learning IBM\.venv\Scripts\python.exe
+C:\Users\Khoai\RMIT\ai-learning-lab\02 Machine Learning\Python For Machine Learning IBM\.venv\Scripts\python.exe
 ```
 
 If needed, reload VS Code:
@@ -761,7 +767,7 @@ print(sys.executable)
 Correct IBM output:
 
 ```text
-C:\Users\Khoai\RMIT\Machine_Learning\Python For Machine Learning IBM\.venv\Scripts\python.exe
+C:\Users\Khoai\RMIT\ai-learning-lab\02 Machine Learning\Python For Machine Learning IBM\.venv\Scripts\python.exe
 ```
 
 ---
@@ -771,7 +777,7 @@ C:\Users\Khoai\RMIT\Machine_Learning\Python For Machine Learning IBM\.venv\Scrip
 Suppose you are studying IBM first:
 
 ```powershell
-cd "C:\Users\Khoai\RMIT\Machine_Learning\Python For Machine Learning IBM"
+cd "C:\Users\Khoai\RMIT\ai-learning-lab\02 Machine Learning\Python For Machine Learning IBM"
 .venv\Scripts\activate
 ```
 
@@ -795,7 +801,7 @@ This switches the terminal to the MIT/RMIT environment.
 IBM:
 
 ```powershell
-cd "C:\Users\Khoai\RMIT\Machine_Learning\Python For Machine Learning IBM"
+cd "C:\Users\Khoai\RMIT\ai-learning-lab\02 Machine Learning\Python For Machine Learning IBM"
 uv run python main.py
 ```
 
@@ -907,16 +913,28 @@ Then each course needs its own `.gitignore`.
 
 ## Your recommended setup
 
-For your current learning system, use one big repo:
+The current learning system uses one repository, with course workspaces inside
+the numbered ML stage:
 
 ```text
-MACHINE_LEARNING/
+ai-learning-lab/
 ├── .gitignore
-├── Machine Learning at MIT/
-└── Python For Machine Learning IBM/
+├── 01 Foundation Mathematics/
+├── 02 Machine Learning/
+│   ├── Machine Learning Andrew/
+│   ├── Machine Learning at RMIT/
+│   ├── Machine Learning tổng/
+│   └── Python For Machine Learning IBM/
+├── 03 Deep Learning/
+├── 04 PyTorch/
+├── 05 NLP and LLM Foundations/
+├── 06 LLM Applications/
+├── 07 AI Agents/
+└── 08 Capstone/
 ```
 
-That is simpler.
+The three Python workspaces each retain their own project files and virtual
+environment. Run workspace commands from the appropriate directory.
 
 ## What about `.venv/.gitignore`?
 
@@ -1148,12 +1166,15 @@ deactivate
 
 # 22. Recommended Workflow for Your Current Setup
 
+The examples in this section capture the original environment setup. For
+current versions and commands, follow the IBM or RMIT workspace README.
+
 ## IBM course setup
 
 Go to the IBM folder:
 
 ```powershell
-cd "C:\Users\Khoai\RMIT\Machine_Learning\Python For Machine Learning IBM"
+cd "C:\Users\Khoai\RMIT\ai-learning-lab\02 Machine Learning\Python For Machine Learning IBM"
 ```
 
 Pin Python 3.12:
