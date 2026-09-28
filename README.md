@@ -16,6 +16,14 @@ are a roadmap, not a claim that their exercises are finished.
 | 07 | Hugging Face Agents Course | Planned | [AI Agents](<07 AI Agents/README.md>) |
 | 08 | Integrated capstone | Planned | [Capstone](<08 Capstone/README.md>) |
 
+## RMIT Classical AI courses
+
+The university courses follow their teaching periods alongside the numbered
+self-study stages. [RMIT Classical AI](<RMIT Classical AI/README.md>) holds the
+planned games and AI course for March 2027 and the general AI course for July
+2027. They cover search, planning, uncertainty, and reinforcement learning;
+stage 07 remains the Hugging Face Agents Course.
+
 ## Existing Machine Learning workspaces
 
 The four original folders now live together under `02 Machine Learning`:
